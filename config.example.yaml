@@ -1,0 +1,33 @@
+# config.example.yaml
+# 실제 실행은 CLI 인자로 할 수 있으며, 이 파일은 연구 재현을 위한 설정 기록용이다.
+
+data:
+  # 문장 단위 분석 예시
+  data_path: data/processed/st_df_All_fin_251120_nega.pkl
+  token_col: token
+  text_col: sentence
+  metadata_col: category
+  era_col: Era
+  era_value: 先秦
+
+  # 문단 단위 분석 예시를 사용할 경우:
+  # data_path: data/processed/para_only_fin_251119_nega.pkl
+  # token_col: pg_token
+  # text_col: paragraph
+
+dmr:
+  k: 100
+  min_df: 30
+  rm_top: 0
+  seed: 2025
+  term_weight: PMI
+  iterations: 500
+  step: 20
+  top_n_words: 30
+
+extraction:
+  target_keywords: [心, 禮, 法]
+  top_n_rank: 30
+  sentences_per_topic: 50
+  keyword_method: hybrid
+  sentence_method: entropy

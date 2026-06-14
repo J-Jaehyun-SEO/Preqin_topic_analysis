@@ -1,0 +1,17 @@
+[project]
+name = "preqin-topic-modeling"
+version = "0.1.0"
+description = "DMR topic modeling pipeline for a pre-Qin classical Chinese corpus"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "tomotopy>=0.12.7",
+  "tqdm>=4.66",
+  "openpyxl>=3.1",
+  "pyarrow>=15.0",
+  "matplotlib>=3.8"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
